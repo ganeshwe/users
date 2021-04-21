@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>User Id Search</title>
+</head>
+
+<body>
+  Enter user id: <input type="text" id="userIdInput">
+
+  <button onclick="searchById()">Search</button>
+
+  <div id="resultBox">
+    <p id="result"></p>
+  </div>
+
+  <script>
+    var userIds = ["U/1", "U/2", "U/3", "U/4", "U/5"];
+
+    function searchById() {
+      var idToSearch = document.getElementById("userIdInput").value;
+      
+      if (userIds.includes(idToSearch)) {
+        document.getElementById("resultBox").style.color = "green";
+        document.getElementById("result").innerHTML = "User id found";
+      } else {
+        document.getElementById("resultBox").style.color = "red";
+        document.getElementById("result").innerHTML = "User id not found";
+      }
+    }
+  </script>
+</body>
+
+</html>
