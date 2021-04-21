@@ -23,10 +23,10 @@
 
       if (userIds.includes(idToSearch)) {
         document.getElementById("resultBox").style.color = "green";
-        document.getElementById("result").innerHTML = "User id found";
+        document.getElementById("result").innerHTML = idToSearch + " user id found";
       } else {
         document.getElementById("resultBox").style.color = "red";
-        document.getElementById("result").innerHTML = "User id not found";
+        document.getElementById("result").innerHTML = idToSearch + " user id not found";
       }
     }
   </script>
