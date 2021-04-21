@@ -3,10 +3,13 @@
 
 <head>
   <title>User Id Search</title>
+  <script type="text/javascript" src="userIds.js"></script>
 </head>
 
 <body>
   Enter user id: <input type="text" id="userIdInput">
+
+  <br><br>
 
   <button onclick="searchById()">Search</button>
 
@@ -15,11 +18,9 @@
   </div>
 
   <script>
-    var userIds = ["U/1", "U/2", "U/3", "U/4", "U/5"];
-
     function searchById() {
       var idToSearch = document.getElementById("userIdInput").value;
-      
+
       if (userIds.includes(idToSearch)) {
         document.getElementById("resultBox").style.color = "green";
         document.getElementById("result").innerHTML = "User id found";
